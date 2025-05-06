@@ -1,0 +1,2 @@
+# Frigate
+Instalação do Frigate
