@@ -2,7 +2,7 @@
 Instalação do Frigate
 
 ```
-version: "3.9"
+#version: "3.9"
 services:
   frigate:
     container_name: frigate
@@ -18,8 +18,8 @@ services:
       - /dev/dri/renderD128:/dev/dri/renderD128 # For intel hwaccel, needs to be updated for your hardware
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /path/to/your/config:/config
-      - /path/to/your/storage:/media/frigate
+      - ./config:/config
+      - ./storage:/media/frigate
       - type: tmpfs # Optional: 1GB of memory, reduces SSD/SD Card wear
         target: /tmp/cache
         tmpfs:
